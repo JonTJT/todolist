@@ -1,7 +1,7 @@
 import React from 'react'
 import ToDo from "./ToDo"
 
-const ToDoList = ({toDoList, handleToggle}) => {
+const ToDoList = ({toDoList, handleToggle, handleFilter}) => {
     return (
         <div>
             {toDoList.map(todo => {
@@ -9,6 +9,7 @@ const ToDoList = ({toDoList, handleToggle}) => {
                     <ToDo todo={todo} handleToggle={handleToggle}/>
                 )
             })}
+            <button style={{margin: "20px"}} onClick={handleFilter}>Clear Completed</button>
         </div>
     );
 };
